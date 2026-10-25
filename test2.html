@@ -1,0 +1,682 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101820">
+
+  <title>Solan Short Bike Tours | OTX Ride Companion</title>
+  <meta name="description" content="Discover Ashwini Khad, Barog, Jatoli Mahadev Temple, Dagshai, Dolanji and nearby places with OTX Ride Companion. Flexible motorcycle pillion ride enquiries around Solan, Himachal Pradesh.">
+  <link rel="canonical" href="https://ride-companion.otxs.de/solan/">
+
+  <meta property="og:title" content="Explore Solan on a Motorcycle | OTX Ride Companion">
+  <meta property="og:description" content="Short scenic rides, local attractions and custom motorcycle trips around Solan. Send an enquiry anytime.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ride-companion.otxs.de/solan/">
+
+  <style>
+    :root {
+      --bg: #101820;
+      --panel: #192630;
+      --panel2: #22333e;
+      --text: #f6f7f8;
+      --muted: #b8c4cc;
+      --yellow: #ffc13b;
+      --orange: #ff8a2b;
+      --border: rgba(255,255,255,.13);
+      --radius: 20px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 85px; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      font: 16px/1.65 Arial, Helvetica, sans-serif;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    button, input, select, textarea { font: inherit; }
+
+    .wrap { width: min(1160px, calc(100% - 36px)); margin: auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(16,24,32,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      min-height: 74px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .logo { font-size: 20px; font-weight: 900; letter-spacing: 1px; }
+    .logo span { color: var(--yellow); }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 19px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .2s;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .primary {
+      background: linear-gradient(135deg, var(--yellow), var(--orange));
+      color: #171c20;
+      border-color: transparent;
+    }
+
+    .outline { background: rgba(255,255,255,.04); }
+
+    .hero {
+      min-height: 590px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(9,15,20,.94), rgba(9,15,20,.62) 60%, rgba(9,15,20,.3)),
+        linear-gradient(0deg, rgba(9,15,20,.4), transparent),
+        url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=2000&q=85")
+        center 55% / cover no-repeat;
+    }
+
+    .hero-content { max-width: 760px; padding: 80px 0; }
+
+    .eyebrow {
+      color: var(--yellow);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1.04;
+      letter-spacing: -2px;
+      margin: 17px 0;
+    }
+
+    h1 span { color: var(--yellow); }
+    .hero p { color: #e0e7eb; max-width: 640px; font-size: 18px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .availability { color: #dce5e9; font-size: 13px; margin-top: 22px; }
+
+    section { padding: 72px 0; }
+
+    .heading { max-width: 740px; margin-bottom: 30px; }
+    h2 { font-size: clamp(30px, 4vw, 44px); line-height: 1.15; margin: 10px 0 14px; }
+    .heading p, .muted { color: var(--muted); }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: -28px;
+      position: relative;
+    }
+
+    .fact {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+    }
+
+    .fact strong { display: block; color: var(--yellow); font-size: 17px; }
+    .fact span { color: var(--muted); font-size: 14px; }
+
+    .featured {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: linear-gradient(120deg, #293944, #18232d);
+      border: 1px solid rgba(255,193,59,.35);
+      border-radius: 24px;
+      overflow: hidden;
+      margin-bottom: 26px;
+    }
+
+    .featured-photo { min-height: 340px; background: #263944; }
+    .featured-copy { padding: clamp(24px, 4vw, 42px); align-self: center; }
+    .featured-copy p { color: var(--muted); }
+    .featured-copy .btn { margin-top: 10px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .photo { height: 215px; position: relative; background: #263944; overflow: hidden; }
+    .photo img { transition: transform .35s; }
+    .card:hover .photo img { transform: scale(1.04); }
+
+    .tag {
+      position: absolute;
+      left: 13px;
+      bottom: 13px;
+      background: rgba(12,20,26,.9);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 6px 11px;
+      font-size: 12px;
+    }
+
+    .content { padding: 21px; display: flex; flex-direction: column; flex: 1; }
+    .content h3 { margin: 0 0 8px; font-size: 21px; line-height: 1.3; }
+    .content p { color: var(--muted); font-size: 14px; margin: 0 0 16px; }
+    .distance { color: var(--yellow); font-size: 12px; font-weight: 800; margin-bottom: 17px; }
+    .content .btn { width: 100%; margin-top: auto; }
+
+    .custom {
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: clamp(24px, 5vw, 44px);
+      background: linear-gradient(120deg, #263742, #17232d);
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .custom p, .custom li { color: var(--muted); }
+    .custom ul { padding-left: 20px; }
+
+    .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .step { padding: 24px; background: var(--panel); border: 1px solid var(--border); border-radius: 18px; }
+    .num {
+      display: grid; place-items: center; width: 38px; height: 38px;
+      background: var(--yellow); color: #141a1e; border-radius: 12px;
+      font-weight: 900; margin-bottom: 13px;
+    }
+    .step h3 { margin: 0 0 8px; }
+    .step p { color: var(--muted); font-size: 14px; margin: 0; }
+
+    .booking { background: #17232d; border-block: 1px solid var(--border); }
+    .booking-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 42px; align-items: start; }
+    .booking-copy p { color: var(--muted); }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 24px;
+      border-radius: 20px;
+    }
+
+    .field { display: flex; flex-direction: column; gap: 7px; }
+    .full { grid-column: 1 / -1; }
+    label { font-size: 13px; font-weight: 700; }
+
+    input, select, textarea {
+      width: 100%;
+      min-height: 46px;
+      padding: 12px;
+      color: var(--text);
+      background: #1b2933;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    textarea { min-height: 95px; resize: vertical; }
+    input:focus, select:focus, textarea:focus { outline: 2px solid var(--yellow); outline-offset: 1px; }
+    .note { color: var(--muted); font-size: 12px; }
+
+    .faq { display: grid; gap: 12px; max-width: 850px; }
+    details { background: var(--panel); border: 1px solid var(--border); padding: 18px; border-radius: 13px; }
+    summary { cursor: pointer; font-weight: 800; }
+    details p { color: var(--muted); margin-bottom: 0; }
+
+    footer { border-top: 1px solid var(--border); padding: 28px 0; color: var(--muted); font-size: 13px; }
+    .footer-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .floating { position: fixed; bottom: 18px; right: 18px; z-index: 20; box-shadow: 0 8px 24px #0007; }
+
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .featured, .custom, .booking-grid { grid-template-columns: 1fr; }
+      .featured-photo { min-height: 280px; }
+    }
+
+    @media (max-width: 620px) {
+      .navlinks a:not(.navbook) { display: none; }
+      .navlinks { gap: 8px; }
+      .navbook { padding: 9px 12px; font-size: 12px; }
+      .hero { min-height: 540px; }
+      section { padding: 54px 0; }
+      .grid, .facts, .steps { grid-template-columns: 1fr; }
+      .facts { margin-top: 18px; }
+      form { grid-template-columns: 1fr; padding: 17px; }
+      .full { grid-column: auto; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto; transition: none !important; }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <nav class="wrap">
+    <a class="logo" href="https://ride-companion.otxs.de/">OTX <span>RIDE COMPANION</span></a>
+    <div class="navlinks">
+      <a href="#destinations">Destinations</a>
+      <a href="#how">How it works</a>
+      <a class="btn primary navbook" href="#book">Enquire anytime</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-content">
+      <div class="eyebrow">OTX Services · Discover and Explore</div>
+      <h1>Discover Solan.<br><span>Let's ride.</span></h1>
+      <p>
+        Take a break from the usual routine and explore Solan's
+        scenic roads, peaceful valleys, temples and nearby hill towns
+        on a motorcycle with a pillion companion.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#destinations">Explore destinations</a>
+        <a class="btn outline" href="#book">Plan your ride</a>
+      </div>
+      <div class="availability">● Send an enquiry anytime · Ride timing subject to confirmation</div>
+    </div>
+  </section>
+
+  <div class="wrap facts">
+    <div class="fact"><strong>Short local rides</strong><span>Discover nearby places without a long trip.</span></div>
+    <div class="fact"><strong>Flexible requests</strong><span>Ask about a date and time that suits you.</span></div>
+    <div class="fact"><strong>Your own destination</strong><span>Suggest a place or request a custom route.</span></div>
+  </div>
+
+  <section id="destinations">
+    <div class="wrap">
+      <div class="heading">
+        <div class="eyebrow">Solan and nearby</div>
+        <h2>Choose your next short ride</h2>
+        <p>
+          Browse some popular places around Solan. Distances are approximate
+          and can vary by pickup point and route. Select a destination to
+          start a booking enquiry.
+        </p>
+      </div>
+
+      <article class="featured">
+        <div class="featured-photo">
+          <img
+            src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&q=85"
+            alt="Green valley and natural mountain scenery"
+            loading="lazy">
+        </div>
+        <div class="featured-copy">
+          <div class="eyebrow">Featured nature ride</div>
+          <h2>Ashwini Khad</h2>
+          <p>
+            Explore the Ashwini Khad area for a nature-focused outing
+            around Solan. It's a good option for travellers who want to
+            get away from the busiest town spots and enjoy the surrounding
+            landscape. Check the exact access point and road conditions
+            before setting off.
+          </p>
+          <p class="distance">Nature · Valley scenery · Custom route</p>
+          <a class="btn primary choose" href="#book" data-destination="Ashwini Khad">Plan an Ashwini Khad ride</a>
+        </div>
+      </article>
+
+      <div class="grid">
+        <article class="card">
+          <div class="photo">
+            <img src="https://hpsolan.nic.in/wp-content/uploads/2018/04/Barog.jpg"
+                 alt="Barog in the Solan hills" loading="lazy">
+            <span class="tag">Quick escape</span>
+          </div>
+          <div class="content">
+            <h3>Barog</h3>
+            <p>Enjoy pine-covered hills and a refreshing ride towards the heritage railway station and tunnel area.</p>
+            <div class="distance">Approx. 7 km · Short ride</div>
+            <a class="btn outline choose" href="#book" data-destination="Barog">Choose Barog</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="photo">
+            <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=1000&q=85"
+                 alt="Temple architecture in a mountainous setting" loading="lazy">
+            <span class="tag">Temple visit</span>
+          </div>
+          <div class="content">
+            <h3>Jatoli Mahadev Temple</h3>
+            <p>Visit the prominent Shiva temple known for its distinctive architecture and hillside setting.</p>
+            <div class="distance">Approx. 10–15 km · Local outing</div>
+            <a class="btn outline choose" href="#book" data-destination="Jatoli Mahadev Temple">Choose Jatoli</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="photo">
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1000&q=85"
+                 alt="Sunlight through a green forest" loading="lazy">
+            <span class="tag">Culture and calm</span>
+          </div>
+          <div class="content">
+            <h3>Dolanji Bon Monastery</h3>
+            <p>Head towards the Menri Monastery area for a peaceful outing and a glimpse of the region's cultural heritage.</p>
+            <div class="distance">Approx. 18 km · Relaxed outing</div>
+            <a class="btn outline choose" href="#book" data-destination="Dolanji Bon Monastery">Choose Dolanji</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="photo">
+            <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1000&q=85"
+                 alt="Forest road and green hillside" loading="lazy">
+            <span class="tag">History and hills</span>
+          </div>
+          <div class="content">
+            <h3>Dagshai</h3>
+            <p>Discover a historic cantonment town with an old-world atmosphere and views across the surrounding hills.</p>
+            <div class="distance">Approx. 18–22 km · Half-day option</div>
+            <a class="btn outline choose" href="#book" data-destination="Dagshai">Choose Dagshai</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="photo">
+            <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1000&q=85"
+                 alt="Forest trail surrounded by trees" loading="lazy">
+            <span class="tag">Heritage stop</span>
+          </div>
+          <div class="content">
+            <h3>Mohan Shakti Heritage Park</h3>
+            <p>Visit the hillside heritage and temple complex near Hart village, known for its architecture and landscape.</p>
+            <div class="distance">Route depends on pickup point</div>
+            <a class="btn outline choose" href="#book" data-destination="Mohan Shakti Heritage Park">Choose Mohan Shakti</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="photo">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85"
+                 alt="Mountain scenery and winding landscape" loading="lazy">
+            <span class="tag">Hill town</span>
+          </div>
+          <div class="content">
+            <h3>Kasauli</h3>
+            <p>A longer outing for forest paths, colonial-era lanes, local cafés and viewpoints over the hills.</p>
+            <div class="distance">Approx. 27 km · Half-day option</div>
+            <a class="btn outline choose" href="#book" data-destination="Kasauli">Choose Kasauli</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="photo">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85"
+                 alt="Mountain peaks rising above the landscape" loading="lazy">
+            <span class="tag">Longer adventure</span>
+          </div>
+          <div class="content">
+            <h3>Chail</h3>
+            <p>For a longer ride, explore forested mountain roads and the Chail area. Allow sufficient time and daylight.</p>
+            <div class="distance">Approx. 38–45 km · Plan ahead</div>
+            <a class="btn outline choose" href="#book" data-destination="Chail">Choose Chail</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="photo">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=85"
+                 alt="Scenic highland landscape" loading="lazy">
+            <span class="tag">Your own plan</span>
+          </div>
+          <div class="content">
+            <h3>Custom local ride</h3>
+            <p>Have another destination in mind? Share your pickup point and desired destination to discuss a route.</p>
+            <div class="distance">Flexible · Subject to confirmation</div>
+            <a class="btn outline choose" href="#book" data-destination="Custom destination">Plan a custom ride</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="muted" style="font-size:12px;margin-top:22px">
+        Some card images are illustrative landscape photos rather than verified photographs
+        of the exact destination. Confirm local access, opening hours and road conditions.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap custom">
+      <div>
+        <div class="eyebrow">Your ride, your way</div>
+        <h2>Want to explore somewhere else?</h2>
+        <p>
+          You can request another local destination, a scenic loop,
+          a temple visit, or a pickup and drop-off arrangement.
+          Tell us what you have in mind and we'll discuss the options.
+        </p>
+        <a class="btn primary" href="#book">Request a custom ride</a>
+      </div>
+      <div>
+        <h3>Before you enquire</h3>
+        <ul>
+          <li>Choose your pickup location.</li>
+          <li>Share your preferred date and time.</li>
+          <li>Mention luggage and planned stops.</li>
+          <li>Confirm price and return arrangements in advance.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="heading">
+        <div class="eyebrow">Simple booking</div>
+        <h2>Send an enquiry anytime</h2>
+        <p>You can message at any time of day. Actual departure times and rides must be confirmed before travelling.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="num">01</div><h3>Choose a place</h3><p>Select a destination above or request your own route.</p></div>
+        <div class="step"><div class="num">02</div><h3>Share your details</h3><p>Provide pickup, date, time and luggage information.</p></div>
+        <div class="step"><div class="num">03</div><h3>Confirm the ride</h3><p>Discuss availability, cost, route and return arrangements.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking" id="book">
+    <div class="wrap booking-grid">
+      <div class="booking-copy">
+        <div class="eyebrow">Ride enquiry</div>
+        <h2>Let's plan your Solan ride.</h2>
+        <p>Complete this form to prepare a WhatsApp message. You can enquire about a same-day ride or plan for a future date.</p>
+        <p><strong>Flexible requests.</strong> All rides remain subject to confirmation, safe weather and road conditions, and applicable local requirements.</p>
+        <p class="note">Submitting an enquiry does not automatically confirm a booking.</p>
+      </div>
+
+      <form id="rideForm">
+        <div class="field">
+          <label for="name">Your name *</label>
+          <input id="name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="phone">Contact number</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Optional">
+        </div>
+        <div class="field">
+          <label for="pickup">Pickup location *</label>
+          <input id="pickup" name="pickup" placeholder="e.g. Solan bus stand" required>
+        </div>
+        <div class="field">
+          <label for="destination">Destination *</label>
+          <select id="destination" name="destination" required>
+            <option value="">Choose a destination</option>
+            <option>Ashwini Khad</option>
+            <option>Barog</option>
+            <option>Jatoli Mahadev Temple</option>
+            <option>Dolanji Bon Monastery</option>
+            <option>Dagshai</option>
+            <option>Mohan Shakti Heritage Park</option>
+            <option>Kasauli</option>
+            <option>Chail</option>
+            <option>Custom destination</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="date">Preferred date *</label>
+          <input id="date" name="date" type="date" required>
+        </div>
+        <div class="field">
+          <label for="time">Preferred time *</label>
+          <input id="time" name="time" type="time" required>
+        </div>
+        <div class="field">
+          <label for="trip">Trip preference</label>
+          <select id="trip" name="trip">
+            <option>Discuss with me</option>
+            <option>One-way ride</option>
+            <option>Round trip</option>
+            <option>Short sightseeing loop</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="luggage">Luggage</label>
+          <select id="luggage" name="luggage">
+            <option>None</option>
+            <option>Small backpack</option>
+            <option>Other luggage — discuss first</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="notes">Additional details</label>
+          <textarea id="notes" name="notes" placeholder="Stops, return plan or other questions"></textarea>
+        </div>
+        <div class="field full">
+          <button class="btn primary" type="submit">Continue to WhatsApp</button>
+          <div class="note">WhatsApp opens with your message ready for review and sending.</div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="heading">
+        <div class="eyebrow">Good to know</div>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details><summary>Can I enquire at any time?</summary><p>Yes. You can send an enquiry any time, day or night. The requested departure time must be confirmed before the ride.</p></details>
+        <details><summary>Can I ask for a ride today?</summary><p>Yes, you can ask about same-day availability. It depends on schedule, daylight, weather, road conditions and route.</p></details>
+        <details><summary>Is this a car or taxi service?</summary><p>No. This page is for motorcycle pillion-ride enquiries. Please enquire only if you're comfortable travelling as a motorcycle passenger.</p></details>
+        <details><summary>How much does a ride cost?</summary><p>Confirm the total cost, stops, waiting time and return arrangements directly before agreeing to the ride.</p></details>
+        <details><summary>Can I bring luggage?</summary><p>Motorcycle storage is limited. Please mention luggage in advance so suitability can be discussed.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <div><strong class="logo">OTX <span>RIDE COMPANION</span></strong><br>Discover and Explore</div>
+    <div><a href="https://ride-companion.otxs.de/">Ride Companion home</a> · <a href="https://otxs.de/">OTX Services</a></div>
+    <div>© <span id="year"></span> OTX Services</div>
+  </div>
+  <div class="wrap note" style="margin-top:18px">
+    Ride requests are subject to availability, applicable transport laws, permits,
+    insurance and safety requirements. Wear a properly fitted helmet. Unsafe
+    weather or road conditions may require changes or cancellation.
+  </div>
+</footer>
+
+<a class="btn primary floating" href="#book">Enquire anytime ↗</a>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const dateField = document.getElementById("date");
+  const now = new Date();
+  dateField.min = new Date(now.getTime() - now.getTimezoneOffset() * 60000)
+    .toISOString().slice(0, 10);
+  dateField.value = dateField.min;
+
+  document.querySelectorAll(".choose").forEach(link => {
+    link.addEventListener("click", () => {
+      document.getElementById("destination").value = link.dataset.destination;
+    });
+  });
+
+  document.getElementById("rideForm").addEventListener("submit", event => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    if (!form.reportValidity()) return;
+
+    const d = new FormData(form);
+    const message = [
+      "Hi OTX Ride Companion, I'd like to enquire about a short motorcycle ride around Solan.",
+      "",
+      "Name: " + d.get("name"),
+      "Contact: " + (d.get("phone") || "Not provided"),
+      "Pickup: " + d.get("pickup"),
+      "Destination: " + d.get("destination"),
+      "Preferred date: " + d.get("date"),
+      "Preferred time: " + d.get("time"),
+      "Trip preference: " + d.get("trip"),
+      "Luggage: " + d.get("luggage"),
+      "Additional details: " + (d.get("notes") || "None"),
+      "",
+      "Please confirm availability and total cost.",
+      "Source: https://ride-companion.otxs.de/solan/"
+    ].join("\n");
+
+    window.open(
+      "https://wa.me/919625188625?text=" + encodeURIComponent(message),
+      "_blank",
+      "noopener,noreferrer"
+    );
+  });
+</script>
+</body>
+</html>
+
